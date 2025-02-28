@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func ExampleStd() {
+func Example() {
 	m := New()
 	a, b := http.NewServeMux(), http.NewServeMux()
 	a.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
