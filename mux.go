@@ -32,7 +32,7 @@ func (m Mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// 如果之前的vps搭建的是一个ip对应一个域名的网站，通过https://ip可以访问网站
-	// 在变成vps搭建的是一个ip对于多个域名的网站后，通过下面的代码，
+	// 在变成vps搭建的是一个ip对应多个域名的网站后，通过下面的代码，
 	// 配合先添加旧域名网站的handle，保留https://ip可以访问旧网站的行为
 	m.firstStd.ServeHTTP(w, r)
 }
